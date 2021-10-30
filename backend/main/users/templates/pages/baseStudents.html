@@ -1,0 +1,49 @@
+{% extends 'pages/basePage.html' %}
+{% load static %}
+
+{% block body %}
+<div class="navbar-fixed">
+  <nav class="teal">
+  <a href="{% url 'admins-home' %}" class="brand-logo">&emsp;DashBoard</a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="{% url 'students-wishlist' %}">Wishlist</a></li>
+    <li><a href="{% url 'students-applied' %}">Applied</a></li>
+    <li><a href="{% url 'users-logout' %}">{{user.username}}(logout)</a></li>
+  </ul>
+</nav>
+</div>
+<ul class="sidenav" id="mobile-sidenav"></ul>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Sales', 'Expenses'],
+          ['2004',  1000,      400],
+          ['2005',  1170,      460],
+          ['2006',  660,       720],
+          ['2007',  1030,      940],
+          ['2007',  1030,      940]
+        ]);
+
+        var options = {
+          title: 'Company Performance',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+{% block content %}
+{% endblock content %}
+
+{% endblock body %}
+
+{% block extra %}
+  {% block async %}
+  {% endblock async %}
+{% endblock extra %}

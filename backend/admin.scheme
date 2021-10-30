@@ -1,0 +1,18 @@
+Admin:
+    UpcomingEvent:
+        - Title: str
+        - Description: str
+        - posted: datetime
+
+
+    CompanyEligibility:
+        - companyname: str
+        - job_title: str
+        - job_description: str
+        - last_date: str
+        - experience: datetime/int
+
+    StudentDB:
+        {comment: reponse on the upcomming events}
+        - User: type.student
+        - applieddate: datetime

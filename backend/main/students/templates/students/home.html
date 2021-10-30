@@ -1,0 +1,52 @@
+{% extends 'pages/baseStudents.html' %}
+
+{% block content %}
+<div class="container">
+<div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+  <h3>UpComming</h3>
+  <div class="row">
+  {% for obj in upevent %}
+  <div class="col s6">
+      <div class="card">
+        <div class="card-content black-text">
+          <span class="card-title">{{obj.title}}</span>
+          <p>{{obj.desc}}</p>
+        </div>
+        <div class="card-action">
+          <a href="#" class="teal-text">Add to WishList</a>
+        </div>
+      </div>
+  </div>
+  {% endfor %}
+  </div>
+  <h3>Current Events</h3>
+  <div class="row">
+  <div class="col s6">
+      <div class="card">
+        <div class="card-content black-text">
+          <span class="card-title">title</span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, soluta.</p>
+        </div>
+        <div class="card-action">
+          <a href="#" class="teal-text">Add Application</a>
+        </div>
+      </div>
+  </div>
+  <div class="col s6">
+      <div class="card">
+        <div class="card-content black-text">
+          <span class="card-title">title</span>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, soluta.</p>
+        </div>
+        <div class="card-action">
+          <a href="#" class="teal-text">Add Application</a>
+        </div>
+      </div>
+  </div>
+  </div>
+</div>
+{% endblock content %}
+
+{% block async %}
+{% endblock async %}

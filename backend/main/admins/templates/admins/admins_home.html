@@ -1,0 +1,36 @@
+{% extends 'pages/baseAdmin.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <h3>Published UpComming Events</h3>
+  <ul class="collapsible">
+    {% for obj in upevent %}
+    <li>
+      <div class="collapsible-header">{{obj.title}}</div>
+      <div class="collapsible-body"><span>{{obj.desc}}</span></div>
+    </li>
+    {% endfor %}
+  </ul>
+  <h3>Published Current Events</h3>
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header">First</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Second</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    <li>
+      <div class="collapsible-header">Third</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+  </ul>
+</div>
+{% endblock content %}
+
+{% block async %}
+<script>
+</script>
+{% endblock async %}
