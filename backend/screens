@@ -1,0 +1,48 @@
+Login Screen:
+    username: str field
+    password: str field
+    submit: button
+
+UserScreens:
+    UserDashboard: "seen after successful login"
+        navbar: topbar
+            contains links for
+                - wishlist
+                    - onclicking
+                        - list of all the added UpcomingEvents
+                - submitted reponses
+                    - onclicking
+                        - list of all the submitted "CurrentEvents"
+                - profile (#noneed)
+                - logout
+        Rest of page:
+            facebook like feed
+            - Feed created from UpcomingEvents and CurrentEvents
+            - a button on each of above events
+                - UpcomingEvent:
+                    has wishlist button
+                - CurrentEvent
+                    has submit details button
+
+AdminScreens:
+    AdminDashboard:
+        - list of all the previous submits
+        - upload upcoming events
+
+    UpcomingEvent:
+        - Title: str field
+        - Description: str field
+        - posted: datetime field
+
+    CompanyEligibility:
+        - companyname: str field
+        - job_title: str  field
+        - job_description: str field
+        - last_date: str field
+        - experience: int field
+
+    onclicking UpcomingEvents:
+        - list of all the students who `wishlited`
+
+    onclicking CurrentEvents:
+        - list of all the students who `submit Applications`

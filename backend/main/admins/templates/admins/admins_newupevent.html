@@ -1,0 +1,25 @@
+{% extends 'pages/baseAdmin.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>Publish UpComming Events</h1>
+    <form action="" method="post">
+    {% csrf_token %}
+      <div class="input-field">
+        <input id="title" type="text" name="title" class="validate">
+        <label for="title">Title</label>
+      </div>
+      <div class="input-field">
+        <input id="desc" type="text" name="desc" class="validate">
+        <label for="desc">Descripition</label>
+      </div>
+      <button class="btn btn-teal btn-large" type="submit">Post</button>
+    </form>
+</div>
+{% endblock content %}
+
+{% block async %}
+<script>
+</script>
+{% endblock async %}

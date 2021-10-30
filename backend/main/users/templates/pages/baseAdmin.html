@@ -1,0 +1,24 @@
+{% extends 'pages/basePage.html' %}
+{% load static %}
+
+{% block body %}
+<div class="navbar-fixed">
+  <nav class="teal">
+  <a href="{% url 'admins-home' %}" class="brand-logo">&emsp;Home</a>
+  <ul class="right hide-on-med-and-down">
+    <li><a href="{% url 'admins-newupevent' %}">new UpComming</a></li>
+    <li><a href="{% url 'users-logout' %}">{{user.username}}(logout)</a></li>
+  </ul>
+</nav>
+</div>
+<ul class="sidenav" id="mobile-sidenav"></ul>
+<script></script>
+{% block content %}
+{% endblock content %}
+
+{% endblock body %}
+
+{% block extra %}
+  {% block async %}
+  {% endblock async %}
+{% endblock extra %}
